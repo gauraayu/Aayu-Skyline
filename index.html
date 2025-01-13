@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+
+    <link rel="icon" href="/imgs/logoo.webp">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- by goin on aos website it gives animations -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <title>Aayu SkyLines</title>
+</head>
+
+<body>
+    <!-- <img src="/imgs/logoo.webp" alt=""> -->
+    <!-- navbar starts here -->
+    <section class="navbar">
+        <div class="logo">
+            <a href="/index.html"><img src="/imgs/logoo.webp" alt="aayu SkyLines logo"></a>
+        </div>
+
+        <nav>
+            <!-- <div class="menu__toggle"> -->
+            <!-- <input type="checkbox" /> -->
+
+
+
+
+            <ul > 
+                <li><a href="index.html">Book</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#offer">Offers</a></li>
+                <li><a href="#contact">ContactUs</a></li>
+
+
+            </ul>
+
+            </div>
+        </nav>
+        <br>
+        <div class="login">
+            <ul>
+                <li>
+                    <a href="/flight_login.html">Login</a>
+
+                </li>
+                <li> <a href="/flight_signup.html">SignUp</a></li>
+            </ul>
+
+        </div>
+    </section>
+
+
+<section id="marquee"><marquee behavior="" direction="">Welcome to AayuSkylines!!!!!<i class="fa-solid fa-plane fa-rotate-180" style="color: #030405;"></i></marquee></section>
+
+
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight in sky.webp" alt="flight in sky">
+                    <div class="overlay-text">Wings to your dreams, destinations to your heart</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight 2.webp" alt="flight in paris">
+                    <div class="overlay-text">Pack your bags, your next great story is just a ticket away</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight 1.webp" alt="flight in clouds">
+                    <div class="overlay-text">Fly to live, live to explore, explore to inspire</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight australia.webp" alt="flight in australia">
+                    <div class="overlay-text">"Fly in style, arrive in awe."</div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight india.webp" alt="flight in india">
+                    <div class="overlay-text">Create memories that will soar above the rest—start with your flight.
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image-container">
+                    <img src="/imgs/flight 3.webp" alt="flight in australia">
+                    <div class="overlay-text">Wings to your dreams, destinations to your heart</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"><i class="fa-solid fa-plane" style="color: #050607;"></i></div>
+        <div class="swiper-button-prev"><i class="fa-solid fa-plane fa-rotate-180" style="color: #030405;"></i></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div id="ticket">
+        <!-- <div id="checklist1">
+            <div id="form-check">
+                <input type="radio" id="national">
+                <label for="national">
+                    National
+                </label>
+            </div>
+            <div id="form-check">
+                <input type="radio" id="international">
+                <label for="international">
+                    International
+                </label>
+            </div>
+</div> -->
+
+
+
+
+
+
+        <div id="checklist2">
+            <div id="form-check">
+                <input type="radio" id="one-way">
+                <label for="one-way">
+                    One Way
+                </label>
+            </div>
+            <div id="form-check">
+                <input type="radio" id="multi-city">
+                <label for="multi-city">
+                    Multi-city
+                </label>
+            </div>
+            <div id="form-check">
+                <input type="radio" id="return">
+                <label for="return">
+                    Return
+                </label>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div id="destinations">
+            <div id="to">
+                <label for="exampleDataList" class="form-label">To</label>
+                <input class="form-control" list="datalist1" id="place-to" placeholder="Your destination..">
+                <datalist id="datalist1">
+                    <option value="San Francisco">
+                    <option value="New York">
+                    <option value="Seattle">
+                    <option value="Los Angeles">
+                    <option value="India">
+                    <option value="America">
+                    <option value="Australia">
+                </datalist>
+            </div>
+            <div id="from">
+                <label for="exampleDataList" class="form-label">From</label>
+                <input class="form-control" list="datalist2" id="place-from" placeholder="Your destination..">
+                <datalist id="datalist2">
+                    <option value="San Francisco">
+                    <option value="New York">
+                    <option value="Seattle">
+                    <option value="Los Angeles">
+                    <option value="India">
+                    <option value="America">
+                    <option value="Australia">
+                </datalist>
+                <!-- </div>
+            <label for="date">Depart</label>
+            <input type="date" id="departure-date">
+
+            <label for="date">Return</label>
+             <input type="date" id="departure-date"> -->
+                <!-- </div> -->
+            </div>
+            <div id="book-d">
+                <div id="depart">
+                    <label for="date">Depart</label>
+                    <input type="date" id="departure-date">
+                </div>
+                <br><br>
+                <div>
+                    <label for="date">Return</label>
+                    <input type="date" id="departure-date">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="book-d">
+            <div>
+                <label for="date">Depart</label>
+                <input type="date" id="departure-date">
+            </div>
+            <div>
+                <label for="date">Return</label>
+                <input type="date" id="departure-date">
+            </div>
+        </div> -->
+        <div id="search">
+            <label for="submit"></label>
+            <input type="submit" value="Search-flight" id="search-f" placeholder="Search Flight">
+        </div>
+    </div>
+    <div id="top-deals">
+        <div id="h1"><p>Top Deal </p></div>
+   
+  <div class="deals">
+        
+          <div class="deals1" data-aos="fade-up"
+     data-aos-duration="3000"><img src="/imgs/madrid.jpg" alt="">
+        <div id="content">
+            <p>Madrid</p>
+            <p>INR 26,000</p>
+        </div>
+        </div>
+          <div class="deals2" data-aos="fade-up"
+     data-aos-duration="3000"><img src="/imgs/mumbai.jpg" alt="">
+     <div id="content">
+    <p>Mumbai</p>
+<p>INR 22,300</p></div>
+</div>
+          <div class="deals3" data-aos="fade-up"
+     data-aos-duration="3000"><img src="/imgs/new york.jpg" alt="">
+     <div id="content">
+    <p>New-York</p>
+<p>INR 30,000</p></div>
+</div>
+         
+        </div>
+        </div>
+
+
+        <section class="section__container plan__container">
+            <p class="subheader">TRAVEL SUPPORT</p>
+            <h2 class="section__header">Plan your travel with confidence</h2>
+            <p class="description">
+              Find help with your bookings and travel plans, and seee what to expect
+              along your journey.
+            </p>
+            <div class="plan__grid">
+              <div class="plan__content">
+                <span class="number">01</span>
+                <h4>Travel Requirements for Dubai</h4>
+                <p>
+                  Stay informed and prepared for your trip to Dubai with essential
+                  travel requirements, ensuring a smooth and hassle-free experience in
+                  this vibrant and captivating city.
+                </p>
+                <span class="number">02</span>
+                <h4>Multi-risk travel insurance</h4>
+                <p>
+                  Comprehensive protection for your peace of mind, covering a range of
+                  potential travel risks and unexpected situations.
+                </p>
+                <span class="number">03</span>
+                <h4>Travel Requirements by destinations</h4>
+                <p>
+                  Stay informed and plan your trip with ease, as we provide up-to-date
+                  information on travel requirements specific to your desired
+                  destinations.
+                </p>
+              </div>
+              <div class="plan__image" data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500">
+                
+                <img src="/imgs/plan-1.jpg" alt="plan" />
+                <img src="/imgs/plan-2.jpg" alt="plan" />
+                <img src="/imgs/plan-3.jpg" alt="plan" />
+              </div>
+            </div>
+          </section>
+      
+
+        <section class="memories">
+            <div class="section__container memories__container">
+              <div class="memories__header">
+                <h2 class="section__header">
+                  Travel to make memories all around the world
+                </h2>
+                <button class="view__all">View All</button>
+              </div>
+              <div class="memories__grid">
+                <div class="memories__card">
+                  <span><i class="ri-calendar-2-line"></i></span>
+                  <h4>Book & relax</h4>
+                  <p>
+                    With "Book and Relax," you can sit back, unwind, and enjoy the
+                    journey while we take care of everything else.
+                  </p>
+                </div>
+                <div class="memories__card">
+                  <span><i class="ri-shield-check-line"></i></span>
+                  <h4>Smart Checklist</h4>
+                  <p>
+                    Introducing Smart Checklist with us, the innovative solution
+                    revolutionizing the way you travel with our airline.
+                  </p>
+                </div>
+                <div class="memories__card">
+                  <span><i class="ri-bookmark-2-line"></i></span>
+                  <h4>Save More</h4>
+                  <p>
+                    From discounted ticket prices to exclusive promotions and deals,
+                    we prioritize affordability without compromising on quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="section__container offer__container" id="offer">
+            <div class="offer__header">
+              <h2 class="section__header">Flight Offer Details</h2>
+              <a href="#">See All</a>
+            </div>
+            <div class="offer__grid">
+              <div class="offer__card"  data-aos="flip-right" data-aos-duration="1500">
+                <img src="/imgs/offer-1.jpg" alt="offer" />
+                <h4>India To USA</h4>
+                <p>15 Sep 2025</p>
+                <div>
+                  <span>$870.00</span>
+                  <button class="btn">Book Now</button>
+                </div>
+              </div>
+              <div class="offer__card" data-aos="flip-right" data-aos-duration="2500">
+                <img src="/imgs/offer-2.jpg" alt="offer" />
+                <h4>India To Dubai</h4>
+                <p>20 Sep 2025</p>
+                <div>
+                  <span>$570.00</span>
+                  <button class="btn">Book Now</button>
+                </div>
+              </div>
+              <div class="offer__card" data-aos="flip-right" data-aos-duration="3000">
+                <img src="/imgs/offer-3.jpg" alt="offer" />
+                <h4>India To Maldives</h4>
+                <p>20 Sep 2025</p>
+                <div>
+                  <span>$370.00</span>
+                  <button class="btn">Book Now</button>
+                </div>
+              </div>
+            </div>
+            
+          </section>
+
+
+          <section class="section__container lounge__container">
+            <div class="lounge__image" data-aos="fade-up"
+            data-aos-duration="3000">
+              <img src="/imgs/louge-1.webp" alt="lounge" />
+              <img src="/imgs/lounge-2.jpg" alt="lounge" />
+            </div>
+            <div class="lounge__content">
+              <h2 class="section__header">Unaccompanied Minor Lounge</h2>
+              <div class="lounge__grid">
+                <div class="lounge__details">
+                  <h4>Experience Tranquility</h4>
+                  <p>
+                    Serenity Haven offers a tranquil escape, featuring comfortable
+                    seating, calming ambiance, and attentive service.
+                  </p>
+                </div>
+                <div class="lounge__details">
+                  <h4>Elevate Your Experience</h4>
+                  <p>
+                    Designed for discerning travelers, this exclusive lounge offers
+                    premium amenities, assistance, and private workspaces.
+                  </p>
+                </div>
+                <div class="lounge__details">
+                  <h4>A Welcoming Space</h4>
+                  <p>
+                    Creating a family-friendly atmosphere, The Family Zone is the
+                    perfect haven for parents and children.
+                  </p>
+                </div>
+                <div class="lounge__details">
+                  <h4>A Culinary Delight</h4>
+                  <p>
+                    Immerse yourself in a world of flavors, offering international
+                    cuisines, gourmet dishes, and carefully curated beverages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <section class="section__container travellers__container">
+            <h2 class="section__header">Best travellers of the month</h2>
+            <div class="travellers__grid">
+              <div class="travellers__card" >
+                <img src="/imgs/traveller-1.jpg" alt="traveller" />
+                <div class="travellers__card__content">
+                  <img src="/imgs/client-1.jpg" alt="client" />
+                  <h4>Emily Johnson</h4>
+                  <p>Dubai</p>
+                </div>
+              </div>
+              <div class="travellers__card">
+                <img src="/imgs/traveller-2.jpg" alt="traveller" />
+                <div class="travellers__card__content">
+                  <img src="/imgs/client-2.jpg" alt="client" />
+                  <h4>David Smith</h4>
+                  <p>Paris</p>
+                </div>
+              </div>
+              <div class="travellers__card">
+                <img src="/imgs/traveller-3.jpg" alt="traveller" />
+                <div class="travellers__card__content">
+                  <img src="/imgs/client-3.jpg" alt="client" />
+                  <h4>Olivia Brown</h4>
+                  <p>Singapore</p>
+                </div>
+              </div>
+              <div class="travellers__card">
+                <img src="/imgs/traveller-4.jpg" alt="traveller" />
+                <div class="travellers__card__content">
+                  <img src="/imgs/client-4.jpg" alt="client" />
+                  <h4>Daniel Taylor</h4>
+                  <p>Malaysia</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer class="footer" id="contact">
+            <div class="section__container footer__container">
+              <div class="footer__col">
+                <div class="logo">
+                  <a href="#"><img src="/imgs/logoo.webp" alt="logo" /></a>
+                </div>
+                <p>
+                  Explore the world with ease and excitement through our comprehensive <br>
+                  travel platform. Your journey begins here, where seamless planning <br>
+                  meets unforgettable experiences.
+                </p>
+                <ul class="footer__socials">
+                  <li>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ri-youtube-line"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Quick Links</h4>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">Flights</a>
+                  </li>
+                  <li>
+                    <a href="#">Hotels</a>
+                  </li>
+                  <li>
+                    <a href="#">Cruise</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Contact Us</h4>
+                <ul class="footer__links">
+                  <li>
+                    <a href="#">
+                      <span><i class="ri-phone-fill"></i></span> +91 98********
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span><i class="ri-record-mail-line"></i></span> info@Aayuskylines
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span><i class="ri-map-pin-2-fill"></i></span> New Delhi, India
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h4>Subscribe</h4>
+                <form action="/">
+                  <input type="text" placeholder="Enter your email" />
+                  <button class="btn">Subscribe</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer__bar">
+              Copyright © 2025 Web Design Mastery. All rights reserved.
+            </div>
+          </footer>
+
+
+          
+
+        
+    
+
+    <!-- by goin on aos website it gives animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="/index.js"></script>
+</body>
+
+</html>

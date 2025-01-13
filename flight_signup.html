@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login_signup.css">
+    <title>Document</title>
+</head>
+
+<body>
+ 
+    <div id="login">
+        <h2>Sign Up Details..</h2> 
+        <form >
+            <p id="errorname"></p>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <p id="errormobile"></p>
+        <label for="mobile">Number</label>
+        <input type="number" id="no" placeholder="Enter mobile number">
+        
+        <p id="erroremail"></p>
+       <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Email">
+        
+        <p id="errorpassword"></p>
+       <label for="pwd">Password</label>
+        <input type="password" id="pw" placeholder="Enter password">
+        
+        <p id="errorconfirmpassword"></p>
+       
+        <label for="pwd">Confirm Password</label>
+        <input type="password"  id="cpw" placeholder="Enter confirm Password">
+        <input  type="submit" id="submit" value="signup" onclick="return signup()">
+        </form>
+</div>
+
+    <script src="/login_signup.js"></script>
+</body>
+
+</html>
