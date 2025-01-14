@@ -122,7 +122,7 @@ let signup=()=>{
         return false;
     }
     VANTA.CLOUDS({
-      el: ".cloud",
+      el: "#login1",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
