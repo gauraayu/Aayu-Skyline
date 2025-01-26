@@ -1,0 +1,232 @@
+/* Base Styles */
+/* Base Styles */
+/* Base Styles */
+/* Base Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url("https://source.unsplash.com/1600x900/?airplane,travel") no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styles */
+#heading {
+  text-align: center;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+#heading h1 {
+  font-size: 36px;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Search Bar */
+#search {
+  width: 60%;
+  margin: 20px auto;
+  padding: 12px;
+  display: block;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+#search:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 3px 8px rgba(30, 60, 114, 0.4);
+  transform: scale(1.02);
+  outline: none;
+}
+
+/* Fieldset */
+fieldset {
+  border: 2px dashed rgba(30, 60, 114, 0.4);
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+legend {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3c72;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+thead {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(240, 240, 240, 0.9);
+}
+
+tr:hover {
+  background: linear-gradient(90deg, rgba(240, 240, 240, 0.9), rgba(200, 200, 200, 0.7));
+  transform: scale(1.01);
+}
+
+td {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button Styles */
+td button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+td button:first-child {
+  background: linear-gradient(135deg, #e74c3c, #c0392b); /* Cancel */
+}
+
+td button:first-child:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: scale(1.05);
+}
+
+td button:last-child {
+  background: linear-gradient(135deg, #3498db, #2980b9); /* Update */
+}
+
+td button:last-child:hover {
+  background: linear-gradient(135deg, #2980b9, #2471a3);
+  transform: scale(1.05);
+}
+
+/* Update Form */
+#updateform {
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 25px;
+  border: 2px dashed rgba(30, 60, 114, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#updateform h3 {
+  font-size: 24px;
+  color: #1e3c72;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#updateform label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+#updateform input, #updateform select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+#updateform input:focus, #updateform select:focus {
+  border-color: #1e3c72;
+  outline: none;
+}
+
+#updateform input[type=submit] {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#updateform input[type=submit]:hover {
+  background: linear-gradient(135deg, #16375a, #1e3c72);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #search {
+    width: 90%;
+  }
+  table th, table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+  #updateform {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  #search {
+    width: 100%;
+    font-size: 14px;
+  }
+  #heading h1 {
+    font-size: 24px;
+  }
+  fieldset {
+    padding: 15px;
+  }
+  table th, table td {
+    font-size: 10px;
+    padding: 5px;
+  }
+  #updateform {
+    padding: 15px;
+  }
+  #updateform h3 {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=details.css.map */

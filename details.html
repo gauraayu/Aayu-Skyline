@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="details.css">
+    <title>Document</title>
+</head>
+<body onload="fetchData()">
+    <div id="heading">
+        <h1>Passenger Details <span id="headers"></span></h1>
+    </div>
+    <fieldset>
+     <legend>User Data</legend>
+     <div>
+        <input type="search"  id="search" placeholder="Search By Name" >
+    </div>
+    <table align="center" cellspacing="20px" cellpadding="10px">
+       <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Mobile</th>
+                <th>Departure City</th>
+                <th>Destination City</th>
+                <th>Departure Date</th>
+                <th>Class</th>
+                <th>Passengers</th>
+                <th>Price</th>
+                <th >Cancel</th>
+                <th >Update</th>
+            </tr>
+        </thead>
+    <tbody id="display">
+        
+    </tbody>
+</table>
+</fieldset>
+
+<div id="updateform"></div>
+
+  
+
+
+
+<script src="crud.js"></script>
+   
+</body>
+</html>
+           

@@ -1,0 +1,28 @@
+{
+  "flight": [
+    {
+      "name": "Aayu",
+      "age": "20",
+      "number": "8888888888",
+      "depcity": "bhopal",
+      "descity": "Delhi",
+      "depdate": "2025-01-26",
+      "class": "Business",
+      "passengers": "5",
+      "price": "5500",
+      "id": "d722"
+    },
+    {
+      "name": "Trisha",
+      "age": "26",
+      "number": "9733458903",
+      "depcity": "bhopal",
+      "descity": "Mumbai",
+      "depdate": "2025-01-26",
+      "class": "Economy",
+      "passengers": "2",
+      "price": "3000",
+      "id": "a1e4"
+    }
+  ]
+}

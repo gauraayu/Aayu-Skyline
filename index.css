@@ -9,6 +9,7 @@
   --max-width: 1200px;
 }
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -18,14 +19,16 @@
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
-  padding-top: 90px;
+  padding-top: 90px; /* Prevent content from being hidden behind the navbar */
 }
 
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -37,6 +40,12 @@ body {
   text-align: center;
   flex-wrap: wrap;
   height: 90px;
+  /* Logo styling */
+  /* Login Section */
+  /* Navigation menu (ul) */
+  /* Hamburger Menu */
+  /* Checkbox for toggling menu */
+  /* When the checkbox is checked, show the menu */
 }
 .navbar img {
   height: 160px;
@@ -55,6 +64,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0;
 }
 .navbar ul li {
   justify-content: center;
@@ -67,9 +77,63 @@ body {
   font-weight: 0.1px;
 }
 .navbar ul li a:hover {
-  color: rgb(76, 161, 187);
+  color: rgb(76, 161, 187); /* Hover effect for menu items */
+}
+.navbar .menu__toggle {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+.navbar .bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 4px;
+}
+.navbar .menu__toggle-checkbox {
+  display: none; /* Hide the checkbox */
+}
+.navbar .menu__toggle-checkbox:checked + .menu__toggle + nav ul {
+  display: flex; /* Show menu when checked */
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Change the layout of the navbar to vertical for smaller screens */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+    height: auto; /* Allow height to adjust for mobile screens */
+  }
+  .login {
+    margin-top: 15px; /* Space between login section and menu */
+  }
+  /* Initially hide the navigation menu on mobile */
+  ul {
+    display: none; /* Hide menu items initially */
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+    align-items: center;
+  }
+  /* Show the hamburger menu on mobile */
+  .menu__toggle {
+    display: flex;
+  }
+  .navbar img {
+    margin-left: 0; /* Center logo on mobile */
+    height: 60px; /* Smaller logo for mobile screens */
+  }
+}
 #marquee {
   color: rgb(49, 49, 61);
   background-color: rgb(144, 184, 202);
@@ -682,4 +746,78 @@ body {
   font-size: 0.8rem;
   color: var(--white);
   text-align: center;
+}
+
+#bookingform {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#bookingform h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+#bookingform form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+#bookingform form label {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.3rem;
+}
+#bookingform form input,
+#bookingform form select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+#bookingform form input:focus,
+#bookingform form select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+#bookingform form input[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+#bookingform form input[type=submit]:hover {
+  background-color: #0056b3;
+}
+#bookingform form input[type=submit]:active {
+  background-color: #004080;
+}
+@media (max-width: 768px) {
+  #bookingform {
+    padding: 1.5rem;
+  }
+  #bookingform form {
+    gap: 1rem;
+  }
+  #bookingform form input,
+  #bookingform form select {
+    padding: 0.7rem;
+  }
+  #bookingform form input[type=submit] {
+    padding: 0.7rem;
+  }
 }/*# sourceMappingURL=index.css.map */

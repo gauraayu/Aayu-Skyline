@@ -1,0 +1,825 @@
+// #ticket-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     gap: 20px;
+//     padding: 20px;
+//   }
+  
+//   .ticket {
+//     background-color: #fff;
+//     border: 1px solid #ddd;
+//     border-radius: 10px;
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+//     width: 300px;
+//     padding: 20px;
+//     font-family: Arial, sans-serif;
+//     text-align: center;
+//     position: relative;
+//   }
+  
+//   .ticket img {
+//     max-width: 50px;
+//     position: absolute;
+//     top: 10px;
+//     left: 10px;
+//   }
+  
+//   .ticket h3 {
+//     margin-top: 20px;
+//     margin-bottom: 10px;
+//     font-size: 20px;
+//     color: #333;
+//   }
+  
+//   .ticket p {
+//     margin: 5px 0;
+//     font-size: 14px;
+//     color: #555;
+//   }
+  
+//   .ticket-actions {
+//     margin-top: 15px;
+//   }
+  
+//   .ticket-actions button {
+//     margin: 5px;
+//     padding: 5px 10px;
+//     font-size: 14px;
+//     color: #fff;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+//   }
+  
+//   .ticket-actions button:first-child {
+//     background-color: #e74c3c; /* Cancel Button */
+//   }
+  
+//   .ticket-actions button:last-child {
+//     background-color: #3498db; /* Update Button */
+//   }
+  
+//   .ticket-actions button:hover {
+//     opacity: 0.9;
+//   }
+  
+//   /* Responsive Design */
+//   @media (max-width: 768px) {
+//     .ticket {
+//       width: 100%;
+//       padding: 15px;
+//     }
+  
+//     .ticket h3 {
+//       font-size: 18px;
+//     }
+  
+//     .ticket p {
+//       font-size: 12px;
+//     }
+  
+//     .ticket-actions button {
+//       padding: 5px;
+//       font-size: 12px;
+//     }
+//   }
+  
+//   @media (max-width: 480px) {
+//     .ticket {
+//       width: 100%;
+//       padding: 10px;
+//     }
+  
+//     .ticket img {
+//       max-width: 40px;
+//     }
+  
+//     .ticket h3 {
+//       font-size: 16px;
+//     }
+  
+//     .ticket p {
+//       font-size: 10px;
+//     }
+  
+//     .ticket-actions button {
+//       font-size: 10px;
+//       padding: 5px;
+//     }
+//   }
+  
+
+
+/* Base Styles */
+// body {
+//     font-family: 'Arial', sans-serif;
+//     margin: 0;
+//     padding: 0;
+//     background-color: #f9f9f9;
+//     color: #333;
+//     line-height: 1.5;
+//   }
+  
+//   /* Heading Styles */
+//   #heading {
+//     text-align: center;
+//     background-color: #007BFF;
+//     color: #fff;
+//     padding: 20px 0;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   #heading h1 {
+//     font-size: 28px;
+//     margin: 0;
+//   }
+  
+//   /* Search Input */
+//   #search {
+//     width: 50%;
+//     padding: 10px;
+//     margin: 20px auto;
+//     display: block;
+//     font-size: 16px;
+//     border: 1px solid #ddd;
+//     border-radius: 5px;
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   #search:focus {
+//     border-color: #007BFF;
+//     outline: none;
+//   }
+  
+//   /* Fieldset */
+//   fieldset {
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     max-width: 1200px;
+//     margin: 20px auto;
+//     padding: 20px;
+//     background-color: #fff;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+//   }
+  
+//   legend {
+//     font-size: 18px;
+//     font-weight: bold;
+//     padding: 0 10px;
+//     color: #007BFF;
+//   }
+  
+//   /* Table */
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin: 20px 0;
+//   }
+  
+//   thead {
+//     background-color: #007BFF;
+//     color: #fff;
+//   }
+  
+//   th, td {
+//     padding: 10px 15px;
+//     text-align: center;
+//     border: 1px solid #ddd;
+//   }
+  
+//   th {
+//     font-weight: bold;
+//   }
+  
+//   tr:nth-child(even) {
+//     background-color: #f9f9f9;
+//   }
+  
+//   tr:hover {
+//     background-color: #f1f1f1;
+//   }
+  
+//   td {
+//     font-size: 14px;
+//     color: #555;
+//   }
+  
+//   /* Buttons */
+//   td button {
+//     padding: 5px 10px;
+//     border: none;
+//     border-radius: 5px;
+//     font-size: 14px;
+//     color: #fff;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//   }
+  
+//   td button:first-child {
+//     background-color: #e74c3c; /* Cancel */
+//   }
+  
+//   td button:first-child:hover {
+//     background-color: #c0392b;
+//   }
+  
+//   td button:last-child {
+//     background-color: #3498db; /* Update */
+//   }
+  
+//   td button:last-child:hover {
+//     background-color: #2980b9;
+//   }
+  
+//   /* Update Form */
+//   #updateform {
+//     margin: 20px auto;
+//     max-width: 600px;
+//     padding: 20px;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     background-color: #fff;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+//   }
+  
+//   #updateform h3 {
+//     font-size: 22px;
+//     color: #007BFF;
+//     margin-bottom: 20px;
+//   }
+  
+//   #updateform label {
+//     font-size: 14px;
+//     color: #555;
+//   }
+  
+//   #updateform input, #updateform select {
+//     width: 100%;
+//     padding: 10px;
+//     margin-bottom: 15px;
+//     border: 1px solid #ddd;
+//     border-radius: 5px;
+//     font-size: 14px;
+//   }
+  
+//   #updateform input:focus, #updateform select:focus {
+//     border-color: #007BFF;
+//     outline: none;
+//   }
+  
+//   #updateform input[type="submit"] {
+//     background-color: #007BFF;
+//     color: #fff;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//   }
+  
+//   #updateform input[type="submit"]:hover {
+//     background-color: #0056b3;
+//   }
+  
+//   /* Responsive Design */
+//   @media (max-width: 1024px) {
+//     #search {
+//       width: 70%;
+//     }
+  
+//     table th, table td {
+//       font-size: 12px;
+//       padding: 8px;
+//     }
+  
+//     #updateform {
+//       padding: 15px;
+//     }
+//   }
+  
+//   @media (max-width: 768px) {
+//     #search {
+//       width: 90%;
+//     }
+  
+//     table {
+//       font-size: 12px;
+//     }
+  
+//     table th, table td {
+//       padding: 6px;
+//     }
+//   }
+  
+//   @media (max-width: 480px) {
+//     #search {
+//       width: 100%;
+//       font-size: 14px;
+//     }
+  
+//     #heading h1 {
+//       font-size: 20px;
+//     }
+  
+//     fieldset {
+//       padding: 10px;
+//     }
+  
+//     table th, table td {
+//       font-size: 10px;
+//       padding: 5px;
+//     }
+  
+//     #updateform {
+//       padding: 10px;
+//     }
+  
+//     #updateform h3 {
+//       font-size: 18px;
+//     }
+//   }
+  
+
+/* Base Styles */
+// body {
+//     font-family: 'Roboto', sans-serif;
+//     margin: 0;
+//     padding: 0;
+//     background-color: #f4f7fc;
+//     color: #333;
+//     line-height: 1.6;
+//   }
+  
+//   /* Header Styles */
+//   #heading {
+//     text-align: center;
+//     background: linear-gradient(135deg, #007BFF, #0056b3);
+//     color: #fff;
+//     padding: 20px 0;
+//     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   #heading h1 {
+//     font-size: 32px;
+//     margin: 0;
+//     letter-spacing: 1px;
+//   }
+  
+//   /* Search Bar */
+//   #search {
+//     width: 60%;
+//     margin: 20px auto;
+//     padding: 12px;
+//     display: block;
+//     font-size: 16px;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+//     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+//   }
+  
+//   #search:focus {
+//     border-color: #007BFF;
+//     box-shadow: 0 3px 8px rgba(0, 123, 255, 0.4);
+//     outline: none;
+//   }
+  
+//   /* Fieldset */
+//   fieldset {
+//     border: 1px solid #ddd;
+//     border-radius: 12px;
+//     max-width: 1100px;
+//     margin: 20px auto;
+//     padding: 20px;
+//     background-color: #fff;
+//     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+//   }
+  
+//   legend {
+//     font-size: 18px;
+//     font-weight: 600;
+//     color: #007BFF;
+//     padding: 0 10px;
+//   }
+  
+//   /* Table Styles */
+//   table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin: 20px 0;
+//     background-color: #fff;
+//     border-radius: 10px;
+//     overflow: hidden;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+//   }
+  
+//   thead {
+//     background-color: #007BFF;
+//     color: #fff;
+//     text-transform: uppercase;
+//     font-size: 14px;
+//     letter-spacing: 0.5px;
+//   }
+  
+//   th, td {
+//     padding: 15px;
+//     text-align: center;
+//     border-bottom: 1px solid #ddd;
+//   }
+  
+//   th {
+//     font-weight: 700;
+//   }
+  
+//   tr:nth-child(even) {
+//     background-color: #f9f9f9;
+//   }
+  
+//   tr:hover {
+//     background-color: #f1f1f1;
+//   }
+  
+//   td {
+//     font-size: 14px;
+//     color: #555;
+//   }
+  
+//   /* Button Styles */
+//   td button {
+//     padding: 8px 12px;
+//     border: none;
+//     border-radius: 5px;
+//     font-size: 14px;
+//     color: #fff;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//   }
+  
+//   td button:first-child {
+//     background-color: #e74c3c; /* Cancel */
+//   }
+  
+//   td button:first-child:hover {
+//     background-color: #c0392b;
+//   }
+  
+//   td button:last-child {
+//     background-color: #3498db; /* Update */
+//   }
+  
+//   td button:last-child:hover {
+//     background-color: #2980b9;
+//   }
+  
+//   /* Update Form */
+//   #updateform {
+//     margin: 30px auto;
+//     max-width: 600px;
+//     padding: 25px;
+//     border: 1px solid #ddd;
+//     border-radius: 12px;
+//     background-color: #fff;
+//     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+//   }
+  
+//   #updateform h3 {
+//     font-size: 24px;
+//     color: #007BFF;
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+  
+//   #updateform label {
+//     font-size: 14px;
+//     font-weight: 500;
+//     color: #555;
+//   }
+  
+//   #updateform input, #updateform select {
+//     width: 100%;
+//     padding: 12px;
+//     margin-bottom: 15px;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     font-size: 14px;
+//     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+//     transition: border-color 0.3s ease;
+//   }
+  
+//   #updateform input:focus, #updateform select:focus {
+//     border-color: #007BFF;
+//     outline: none;
+//   }
+  
+//   #updateform input[type="submit"] {
+//     background-color: #007BFF;
+//     color: #fff;
+//     border: none;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//   }
+  
+//   #updateform input[type="submit"]:hover {
+//     background-color: #0056b3;
+//   }
+  
+//   /* Responsive Design */
+//   @media (max-width: 1024px) {
+//     #search {
+//       width: 75%;
+//     }
+  
+//     table th, table td {
+//       font-size: 12px;
+//       padding: 10px;
+//     }
+  
+//     #updateform {
+//       padding: 20px;
+//     }
+//   }
+  
+//   @media (max-width: 768px) {
+//     #search {
+//       width: 90%;
+//     }
+  
+//     table {
+//       font-size: 12px;
+//     }
+  
+//     table th, table td {
+//       padding: 8px;
+//     }
+//   }
+  
+//   @media (max-width: 480px) {
+//     #search {
+//       width: 100%;
+//       font-size: 14px;
+//     }
+  
+//     #heading h1 {
+//       font-size: 24px;
+//     }
+  
+//     fieldset {
+//       padding: 15px;
+//     }
+  
+//     table th, table td {
+//       font-size: 10px;
+//       padding: 5px;
+//     }
+  
+//     #updateform {
+//       padding: 15px;
+//     }
+  
+//     #updateform h3 {
+//       font-size: 18px;
+//     }
+//   }
+  
+
+
+
+
+
+/* Base Styles */
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://source.unsplash.com/1600x900/?airplane,travel') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  #heading {
+    text-align: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  #heading h1 {
+    font-size: 36px;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Search Bar */
+  #search {
+    width: 60%;
+    margin: 20px auto;
+    padding: 12px;
+    display: block;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  }
+  
+  #search:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 3px 8px rgba(30, 60, 114, 0.4);
+    transform: scale(1.02);
+    outline: none;
+  }
+  
+  /* Fieldset */
+  fieldset {
+    border: 2px dashed rgba(30, 60, 114, 0.4);
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  legend {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e3c72;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+  
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  thead {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: 700;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(240, 240, 240, 0.9);
+  }
+  
+  tr:hover {
+    background: linear-gradient(90deg, rgba(240, 240, 240, 0.9), rgba(200, 200, 200, 0.7));
+    transform: scale(1.01);
+  }
+  
+  td {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Button Styles */
+  td button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  td button:first-child {
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Cancel */
+  }
+  
+  td button:first-child:hover {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: scale(1.05);
+  }
+  
+  td button:last-child {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Update */
+  }
+  
+  td button:last-child:hover {
+    background: linear-gradient(135deg, #2980b9, #2471a3);
+    transform: scale(1.05);
+  }
+  
+  /* Update Form */
+  #updateform {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 25px;
+    border: 2px dashed rgba(30, 60, 114, 0.4);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #updateform h3 {
+    font-size: 24px;
+    color: #1e3c72;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  #updateform label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  #updateform input, #updateform select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+  }
+  
+  #updateform input:focus, #updateform select:focus {
+    border-color: #1e3c72;
+    outline: none;
+  }
+  
+  #updateform input[type="submit"] {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #updateform input[type="submit"]:hover {
+    background: linear-gradient(135deg, #16375a, #1e3c72);
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #search {
+      width: 90%;
+    }
+  
+    table th, table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    #updateform {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #search {
+      width: 100%;
+      font-size: 14px;
+    }
+  
+    #heading h1 {
+      font-size: 24px;
+    }
+  
+    fieldset {
+      padding: 15px;
+    }
+  
+    table th, table td {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    #updateform {
+      padding: 15px;
+    }
+  
+    #updateform h3 {
+      font-size: 18px;
+    }
+  }
+  

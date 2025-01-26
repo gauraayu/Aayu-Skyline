@@ -26,7 +26,7 @@
 <body>
     <!-- <img src="/imgs/logoo.webp" alt=""> -->
     <!-- navbar starts here -->
-    <section class="navbar">
+    <!-- <section class="navbar">
         <div class="logo" data-aos="fade-down"
         data-aos-easing="linear"
         data-aos-duration="1500">
@@ -34,8 +34,7 @@
         </div>
 
         <nav>
-            <!-- <div class="menu__toggle"> -->
-            <!-- <input type="checkbox" /> -->
+            
 
 
 
@@ -64,7 +63,71 @@ data-aos-duration="1500">
             </ul>
 
         </div>
+    </section> -->
+
+
+
+    <section class="navbar">
+      <div class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <a href="/index.html"><img src="/imgs/logoo.webp" alt="aayu SkyLines logo"></a>
+      </div>
+    
+      <nav>
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <ul>
+            <li><a href="index.html">Book</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#offer">Offers</a></li>
+            <li><a href="#contact">ContactUs</a></li>
+          </ul>
+        </div>
+      </nav>
+    
+      <!-- Hamburger Menu Checkbox -->
+      <input type="checkbox" id="menuToggle" class="menu__toggle-checkbox">
+      <label for="menuToggle" class="menu__toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+    
+      <div class="login">
+        <ul>
+          <li><a href="/flight_login.html">Login</a></li>
+          <li><a href="/flight_signup.html">SignUp</a></li>
+        </ul>
+      </div>
     </section>
+    
+<!-- 
+    <section class="navbar">
+      <div class="logo" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+          <a href="/index.html"><img src="/imgs/logoo.webp" alt="aayu SkyLines logo"></a>
+      </div>
+  
+      <div class="menu__toggle" id="menuToggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+  
+      <nav>
+          <ul class="menu">
+              <li><a href="index.html">Book</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#offer">Offers</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          </ul>
+      </nav>
+  
+      <div class="login">
+          <ul>
+              <li><a href="/flight_login.html">Login</a></li>
+              <li><a href="/flight_signup.html">Sign Up</a></li>
+          </ul>
+      </div> -->
+  </section>
+  
 
 
 <section id="marquee"><marquee behavior="" direction="">Welcome to AayuSkylines!!!!!<i class="fa-solid fa-plane fa-rotate-180" style="color: #030405;"></i></marquee></section>
@@ -411,6 +474,43 @@ data-aos-duration="1500">
               </div>
             </div>
           </section>
+          <section id="bookingform">
+            <h1>Flight Booking Form</h1>
+               <form id="booking-form1">
+                   <label for="first-name"> Name</label>
+                   <input type="text" id="first-name" name="first-name" required placeholder="Enter your Name">
+         
+                   <label for="age">Age</label>
+                   <input type="number" id="age" name="age" required placeholder="Enter your Age">
+         
+                   <label for="phone">Phone Number</label>
+                   <input type="tel" id="phone" name="phone" required placeholder="Enter your Mobile">
+         
+                   <label for="departure-city">Departure City</label>
+                   <input type="text" id="departure-city" name="departure-city" required placeholder="Enter your City">
+         
+                   <label for="destination-city">Destination City</label>
+                   <input type="text" id="destination-city" name="destination-city" required placeholder="Enter your City">
+         
+                   <label for="departure-date">Departure Date</label>
+                   <input type="date" id="departure-date" name="departure-date" required>
+         
+                   <label for="choice">Class</label>
+                   <select id="choice" name="choice" required placeholder="Enter your Class">
+                       <option value="economy">Economy</option>
+                       <option value="business">Business</option>
+                       <option value="first">First Class</option>
+                   </select>
+         
+                   <label for="passengers">Number of Passengers</label>
+                   <input type="number" id="passengers" name="passengers" min="1" required placeholder="Enter Number of Passengers">
+                    
+                   <label for="price">Price</label>
+                   <input type="number" name="price" id="price">
+         
+                   <input type="submit" value="Book Flight" onclick="return insertt()" id="btn1">
+             </form>
+           </section>
       
           <section class="section__container travellers__container">
             <h2 class="section__header">Best travellers of the month</h2>
@@ -538,8 +638,9 @@ data-aos-duration="1500">
         AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+<script src="/crud.js"></script>
     <script src="/index.js"></script>
+    
 </body>
 
 </html>

@@ -27,6 +27,10 @@ var swiper = new Swiper(".mySwiper", {
   })
   
 
-
-
  
+
+// document.getElementById('menuToggle').addEventListener('click', function () {
+//   const menu = document.querySelector('ul');
+//   menu.classList.toggle('active');
+// });
+
