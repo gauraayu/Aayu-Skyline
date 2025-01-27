@@ -2,64 +2,104 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+/* Body Styling */
 body {
   height: 100vh;
   background-image: url("/imgs/login2.jpg");
-  background-size: 100vw;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
 }
-body #h1 {
+
+/* Responsive Heading */
+h1 {
   margin: 10%;
-  margin-top: 15%;
+  font-size: 2.5rem;
+  color: rgb(18, 10, 36);
+  text-align: center;
   font-size: 40px;
   color: rgb(18, 10, 36);
-  justify-content: center;
 }
-body #login1 {
+
+/* Login Container */
+#login1, #login {
   background-color: rgba(195, 187, 197, 0.4);
-  margin: 10%;
-  width: 100%;
-  box-shadow: 5px 5px 5px rgb(195, 187, 197);
-  border-radius: 2%;
-  padding: 20px;
+  margin: 5%;
+  width: 90%;
   max-width: 400px;
-  max-height: 60%;
+  box-shadow: 5px 5px 5px rgba(195, 187, 197, 0.4);
+  border-radius: 8px;
+  padding: 20px;
 }
-body #login1 form {
+
+/* Form Styling */
+form {
   display: flex;
   flex-direction: column;
 }
-body #login1 form label {
+
+form label {
   margin-bottom: 10px;
   color: rgb(0, 0, 0);
   font-weight: bold;
   padding-top: 3%;
 }
-body #login1 form input {
+
+form input {
   padding: 10px;
   margin-bottom: 15px;
   border: none;
   background-color: rgba(226, 226, 226, 0.4);
   border-bottom: 2px solid white;
 }
-body #login1 form input #submit {
-  padding-top: 10%;
+
+form input#submit {
   margin-top: 10%;
   background-color: black;
+  color: white;
+  cursor: pointer;
 }
-body #login {
-  background-color: rgba(195, 187, 197, 0.4);
-  margin: 5%;
-  width: 100%;
-  box-shadow: 5px 5px 5px rgb(195, 187, 197);
-  border-radius: 2%;
-  padding: 20px;
-  max-width: 400px;
+
+/* Heading inside the login form */
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: rgba(172, 158, 206, 0.5);
+  padding: 10px 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
-body #login h2 {
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #login1, #login {
+    width: 80%;
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  #login1, #login {
+    width: 90%;
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin: 5%;
+  }
+  form input {
+    font-size: 1rem;
+  }
+}
+h2 {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -68,27 +108,4 @@ body #login h2 {
   background-color: rgba(172, 158, 206, 0.5);
   height: 10%;
   margin-bottom: 30px;
-}
-body #login form {
-  display: flex;
-  flex-direction: column;
-}
-body #login form label {
-  margin-bottom: 10px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  padding-top: 3%;
-}
-body #login form input {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  color: rgb(0, 0, 0);
-  background-color: rgba(226, 226, 226, 0.4);
-  border-bottom: 2px solid white;
-}
-body #login form input #submit {
-  padding-top: 10%;
-  margin-top: 10%;
-  background-color: black;
 }/*# sourceMappingURL=login_signup.css.map */

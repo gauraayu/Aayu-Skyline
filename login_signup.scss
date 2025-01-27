@@ -1,125 +1,249 @@
+// * {
+//     margin: 0;
+//     padding: 0;
+//     // scroll-behavior: smooth;
+//     box-sizing: border-box;
+//   }
+  
+//   // variables
+// //   @import '_variables.scss';
+  
+// // color
+
+// body{
+//     height: 100vh;
+//     background-image: url('/imgs/login2.jpg');
+//     background-size:  100vw;
+    
+    
+//     display: flex;
+//     justify-content: center;
+
+//     #h1{
+//     margin: 10%;
+//     margin-top: 15%;
+//     font-size: 40px;
+//     color: rgb(18, 10, 36);
+//     // text-align: center;
+//     justify-content: center;
+   
+//     }
+// #login1{
+
+//     background-color: rgba(195, 187, 197,0.4);
+   
+//     margin: 10%;
+//     // margin-top: 20%;
+//     // margin-bottom: 20%;
+//     width: 100%;
+//     // border: 3px solid black;
+//     box-shadow: 5px 5px 5px  rgba(195, 187, 197) ;
+//     // height: ;
+//     border-radius: 2%;
+//     padding: 20px;
+//     max-width: 400px;
+//     max-height: 60%;
+//     form{
+//         display: flex;
+//         flex-direction: column;
+        
+        
+//         label{
+//             margin-bottom: 10px;
+//             color: rgb(0, 0, 0);
+//             font-weight: bold;
+//             padding-top: 3%;
+//             // padding-bottom:;
+        
+//         }
+//         input{
+//             padding: 10px;
+//             margin-bottom: 15px;
+//             border: none;
+          
+//             background-color:rgba(226, 226, 226, 0.4);
+//             border-bottom: 2px solid white;
+           
+//             #submit{
+//                 padding-top: 10%;
+//                 margin-top: 10%;
+//                 background-color: black;
+//             }
+//         }}
+// }
+
+// #login{
+
+//     background-color: rgba(195, 187, 197,0.4);
+   
+//     margin: 5%;
+//     width: 100%;
+//     // border: 3px solid black;
+//     box-shadow: 5px 5px 5px  rgba(195, 187, 197) ;
+//     // height: ;
+//     border-radius: 2%;
+//     padding: 20px;
+//     max-width: 400px;
+
+// h2{
+//     text-align: center;
+//     justify-content: center;
+//     align-items: center;
+//     padding-top: 4%;
+//     color: rgb(0, 0, 0);
+//     background-color: rgba(172, 158, 206,0.5);
+//     height: 10%;
+//     margin-bottom: 30px;
+// }
+
+// form{
+// display: flex;
+// flex-direction: column;
+
+
+// label{
+//     margin-bottom: 10px;
+//     color: rgb(0, 0, 0);
+//     font-weight: bold;
+//     padding-top: 3%;
+//     // padding-bottom:;
+
+// }
+// input{
+//     padding: 10px;
+//     margin-bottom: 15px;
+//     border: none;
+//   color: rgb(0, 0, 0);
+//     background-color:rgba(226, 226, 226, 0.4);
+//     border-bottom: 2px solid white;
+   
+//     #submit{
+//         padding-top: 10%;
+//         margin-top: 10%;
+//         background-color: black;
+//     }
+// }}}}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
-    // scroll-behavior: smooth;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
-  // variables
-//   @import '_variables.scss';
-  
-// color
-
-body{
+  /* Body Styling */
+  body {
     height: 100vh;
     background-image: url('/imgs/login2.jpg');
-    background-size:  100vw;
-    
-    
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
-
-    #h1{
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Responsive Heading */
+  h1 {
     margin: 10%;
-    margin-top: 15%;
+    font-size: 2.5rem;
+    color: rgb(18, 10, 36);
+    text-align: center;
     font-size: 40px;
     color: rgb(18, 10, 36);
-    // text-align: center;
-    justify-content: center;
-   
-    }
-#login1{
-
-    background-color: rgba(195, 187, 197,0.4);
-   
-    margin: 10%;
-    // margin-top: 20%;
-    // margin-bottom: 20%;
-    width: 100%;
-    // border: 3px solid black;
-    box-shadow: 5px 5px 5px  rgba(195, 187, 197) ;
-    // height: ;
-    border-radius: 2%;
-    padding: 20px;
-    max-width: 400px;
-    max-height: 60%;
-    form{
-        display: flex;
-        flex-direction: column;
-        
-        
-        label{
-            margin-bottom: 10px;
-            color: rgb(0, 0, 0);
-            font-weight: bold;
-            padding-top: 3%;
-            // padding-bottom:;
-        
-        }
-        input{
-            padding: 10px;
-            margin-bottom: 15px;
-            border: none;
-          
-            background-color:rgba(226, 226, 226, 0.4);
-            border-bottom: 2px solid white;
-           
-            #submit{
-                padding-top: 10%;
-                margin-top: 10%;
-                background-color: black;
-            }
-        }}
-}
-
-#login{
-
-    background-color: rgba(195, 187, 197,0.4);
-   
+  }
+  
+  /* Login Container */
+  #login1, #login {
+    background-color: rgba(195, 187, 197, 0.4);
     margin: 5%;
-    width: 100%;
-    // border: 3px solid black;
-    box-shadow: 5px 5px 5px  rgba(195, 187, 197) ;
-    // height: ;
-    border-radius: 2%;
-    padding: 20px;
+    width: 90%;
     max-width: 400px;
-
-h2{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-top: 4%;
-    color: rgb(0, 0, 0);
-    background-color: rgba(172, 158, 206,0.5);
-    height: 10%;
-    margin-bottom: 30px;
-}
-
-form{
-display: flex;
-flex-direction: column;
-
-
-label{
+    box-shadow: 5px 5px 5px rgba(195, 187, 197, 0.4);
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
     margin-bottom: 10px;
     color: rgb(0, 0, 0);
     font-weight: bold;
     padding-top: 3%;
-    // padding-bottom:;
-
-}
-input{
+  }
+  
+  form input {
     padding: 10px;
     margin-bottom: 15px;
     border: none;
-  color: rgb(0, 0, 0);
-    background-color:rgba(226, 226, 226, 0.4);
+    background-color: rgba(226, 226, 226, 0.4);
     border-bottom: 2px solid white;
-   
-    #submit{
-        padding-top: 10%;
-        margin-top: 10%;
-        background-color: black;
+  }
+  
+  form input#submit {
+    margin-top: 10%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Heading inside the login form */
+  h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgba(172, 158, 206, 0.5);
+    padding: 10px 0;
+    margin-bottom: 30px;
+    border-radius: 5px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    #login1, #login {
+      width: 80%;
+      padding: 15px;
     }
-}}}}
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #login1, #login {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+      margin: 5%;
+    }
+  
+    form input {
+      font-size: 1rem;
+    }
+  }
+  
+
+  h2{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4%;
+        color: rgb(0, 0, 0);
+        background-color: rgba(172, 158, 206,0.5);
+        height: 10%;
+        margin-bottom: 30px;
+    }
+
+
+   
