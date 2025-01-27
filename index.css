@@ -9,6 +9,50 @@
   --max-width: 1200px;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(49, 49, 61);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  height: 90px;
+}
+.navbar img {
+  height: 160px;
+  border-radius: 50%;
+  margin-left: 2;
+}
+.navbar .login {
+  margin-top: 1%;
+  margin-right: 3%;
+}
+.navbar .login a:hover {
+  color: rgb(255, 189, 127);
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.navbar ul li {
+  justify-content: center;
+  padding: 15%;
+}
+.navbar ul li a {
+  color: white;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 0.1px;
+}
+.navbar ul li a:hover {
+  color: rgb(76, 161, 187);
+}
+
 /* Global Reset */
 * {
   margin: 0;
@@ -29,79 +73,18 @@ body {
 }
 
 /* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(49, 49, 61);
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  flex-wrap: wrap;
-  height: 90px;
-  /* Logo styling */
-  /* Login Section */
-  /* Navigation menu (ul) */
-  /* Hamburger Menu */
-  /* Checkbox for toggling menu */
-  /* When the checkbox is checked, show the menu */
-}
-.navbar img {
-  height: 160px;
-  border-radius: 50%;
-  margin-left: 2;
-}
-.navbar .login {
-  margin-top: 1%;
-  margin-right: 3%;
-}
-.navbar .login a:hover {
-  color: rgb(255, 189, 127);
-}
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-}
-.navbar ul li {
-  justify-content: center;
-  padding: 15%;
-}
-.navbar ul li a {
-  color: white;
-  font-size: 25px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 0.1px;
-}
-.navbar ul li a:hover {
-  color: rgb(76, 161, 187); /* Hover effect for menu items */
-}
-.navbar .menu__toggle {
-  display: none; /* Hide by default */
+.hamburger {
+  display: none;
   flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
+  gap: 5px;
   cursor: pointer;
 }
-.navbar .bar {
-  width: 30px;
-  height: 4px;
-  background-color: white;
-  border-radius: 4px;
-}
-.navbar .menu__toggle-checkbox {
-  display: none; /* Hide the checkbox */
-}
-.navbar .menu__toggle-checkbox:checked + .menu__toggle + nav ul {
-  display: flex; /* Show menu when checked */
-  flex-direction: column;
-  width: 100%;
-  margin-top: 20px;
-  align-items: center;
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
 }
 
 /* Responsive Design */
@@ -185,86 +168,6 @@ body {
   font-weight: 10%;
   padding: 10px;
   border-radius: 5px;
-}
-
-#ticket {
-  background-color: rgb(199, 145, 145);
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(233, 221, 221, 0.75);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-}
-#ticket #checklist2 {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 2%;
-  font-size: 20px;
-}
-#ticket #checklist2 input {
-  height: 20px;
-  font-size: 5%;
-  width: 18px;
-}
-#ticket #destinations {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 1.8%;
-  padding-right: 20%;
-  font-size: 30px;
-}
-#ticket #destinations #to {
-  margin-right: 0.6%;
-}
-#ticket #destinations #from {
-  margin-right: 0.6%;
-}
-#ticket #destinations input {
-  height: 40px;
-  width: 250px;
-  padding-right: 2%;
-  margin-right: 2%;
-  border: none;
-  box-shadow: 5px 5px 5px rgba(41, 37, 37, 0.6);
-  border-radius: 10px;
-}
-#ticket #book-d {
-  display: flex;
-  justify-content: space-between;
-  font-size: 30px;
-  padding-right: 2%;
-}
-#ticket #book-d #depart {
-  margin-right: 1%;
-}
-#ticket #book-d input {
-  height: 40px;
-  width: 250px;
-}
-#ticket #search {
-  text-align: center;
-  padding-top: 2%;
-  font-size: 30px;
-}
-#ticket #search input {
-  height: 40px;
-  background-color: rgb(44, 136, 212);
-  width: 200px;
-  box-shadow: 5px 5px 5px rgb(1, 21, 58);
-  font-size: 20px;
-  border: none;
-  border-radius: 5px;
-}
-#ticket #search input:hover {
-  background-color: darkcyan;
-  box-shadow: none;
 }
 
 #top-deals {
@@ -863,5 +766,182 @@ body {
   }
   #ticket #checklist2 label {
     font-size: 0.9rem;
+  }
+}
+
+#bookingform {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#bookingform h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+#bookingform form {
+  display: flex;
+  flex-direction: column;
+}
+#bookingform form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+#bookingform form input[type=text],
+#bookingform form input[type=number],
+#bookingform form input[type=tel],
+#bookingform form input[type=date],
+#bookingform form select {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+}
+#bookingform form input[type=text]:focus,
+#bookingform form input[type=number]:focus,
+#bookingform form input[type=tel]:focus,
+#bookingform form input[type=date]:focus,
+#bookingform form select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+#bookingform form input[type=submit] {
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#bookingform form input[type=submit]:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  #bookingform {
+    padding: 1.5rem;
+  }
+  #bookingform h1 {
+    font-size: 1.5rem;
+  }
+  #bookingform label {
+    font-size: 0.9rem;
+  }
+  #bookingform input,
+  #bookingform select {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+  }
+  #bookingform input[type=submit] {
+    font-size: 0.9rem;
+  }
+}
+
+#ticket {
+  background-color: rgb(199, 145, 145);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(233, 221, 221, 0.75);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+#ticket #checklist2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2%;
+  font-size: 20px;
+}
+#ticket #checklist2 input {
+  height: 20px;
+  font-size: 5%;
+  width: 18px;
+}
+#ticket #destinations {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.8%;
+  padding-right: 20%;
+  font-size: 30px;
+}
+#ticket #destinations #to {
+  margin-right: 0.6%;
+}
+#ticket #destinations #from {
+  margin-right: 0.6%;
+}
+#ticket #destinations input {
+  height: 40px;
+  width: 250px;
+  padding-right: 2%;
+  margin-right: 2%;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(41, 37, 37, 0.6);
+  border-radius: 10px;
+}
+#ticket #book-d {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  padding-right: 2%;
+}
+#ticket #book-d #depart {
+  margin-right: 1%;
+}
+#ticket #book-d input {
+  height: 40px;
+  width: 250px;
+}
+#ticket #search {
+  text-align: center;
+  padding-top: 2%;
+  font-size: 30px;
+}
+#ticket #search input {
+  height: 40px;
+  background-color: rgb(44, 136, 212);
+  width: 200px;
+  box-shadow: 5px 5px 5px rgb(1, 21, 58);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+}
+#ticket #search input:hover {
+  background-color: darkcyan;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #ticket {
+    flex-direction: column;
+    padding: 20px;
+  }
+  #destinations {
+    flex-direction: column;
+  }
+  #book-d {
+    flex-direction: column;
+  }
+  #search input {
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

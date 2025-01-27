@@ -35,3 +35,13 @@ var swiper = new Swiper(".mySwiper", {
 //   menu.classList.toggle('active');
 // });
 
+// function toggleMenu() {
+//   const menu = document.getElementById('nav-menu');
+//   menu.classList.toggle('active');
+// }
+
+function toggleMenu() {
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('active');
+}
+
