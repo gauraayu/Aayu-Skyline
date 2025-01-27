@@ -380,7 +380,7 @@ flex-wrap: wrap;
     }
   }
   #top-deals{
-    margin-top: 10%;
+    margin-top: 5%;
     // margin-right: 5%;
     margin-left: 5%;
     padding: 20px;
@@ -879,17 +879,101 @@ width: 510px;
   color: var(--white);
   text-align: center;
 }
+// #bookingform {
+//   max-width: 600px;
+//   margin: 2rem auto;
+//   padding: 2rem;
+//   background: #f9f9f9;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+//   h1 {
+//     text-align: center;
+//     font-size: 2rem;
+//     color: #333;
+//     margin-bottom: 1.5rem;
+//   }
+
+//   form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1.2rem;
+
+//     label {
+//       font-size: 1rem;
+//       color: #444;
+//       margin-bottom: 0.3rem;
+//     }
+
+//     input,
+//     select {
+//       width: 100%;
+//       padding: 0.8rem;
+//       border: 1px solid #ccc;
+//       border-radius: 5px;
+//       font-size: 1rem;
+//       background: #fff;
+//       transition: border-color 0.3s ease;
+
+//       &:focus {
+//         border-color: #007bff;
+//         outline: none;
+//         box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+//       }
+//     }
+
+//     input[type="submit"] {
+//       background-color: #007bff;
+//       color: #fff;
+//       font-size: 1rem;
+//       font-weight: bold;
+//       cursor: pointer;
+//       border: none;
+//       border-radius: 5px;
+//       padding: 0.8rem;
+//       text-align: center;
+//       transition: background-color 0.3s ease;
+
+//       &:hover {
+//         background-color: #0056b3;
+//       }
+
+//       &:active {
+//         background-color: #004080;
+//       }
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     padding: 1.5rem;
+
+//     form {
+//       gap: 1rem;
+
+//       input,
+//       select {
+//         padding: 0.7rem;
+//       }
+
+//       input[type="submit"] {
+//         padding: 0.7rem;
+//       }
+//     }
+//   }
+// }
+
 #bookingform {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
   h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
     text-align: center;
-    font-size: 2rem;
     color: #333;
     margin-bottom: 1.5rem;
   }
@@ -897,49 +981,46 @@ width: 510px;
   form {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
 
     label {
       font-size: 1rem;
-      color: #444;
-      margin-bottom: 0.3rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 0.5rem;
     }
 
-    input,
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="date"],
     select {
       width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: 0.75rem;
       font-size: 1rem;
-      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
       transition: border-color 0.3s ease;
 
       &:focus {
-        border-color: #007bff;
+        border-color: #007BFF;
         outline: none;
-        box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
       }
     }
 
     input[type="submit"] {
-      background-color: #007bff;
+      background-color: #007BFF;
       color: #fff;
       font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
+      font-weight: 600;
+      padding: 0.75rem;
       border: none;
-      border-radius: 5px;
-      padding: 0.8rem;
-      text-align: center;
+      border-radius: 6px;
+      cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
         background-color: #0056b3;
-      }
-
-      &:active {
-        background-color: #004080;
       }
     }
   }
@@ -947,20 +1028,76 @@ width: 510px;
   @media (max-width: 768px) {
     padding: 1.5rem;
 
-    form {
-      gap: 1rem;
+    h1 {
+      font-size: 1.5rem;
+    }
 
-      input,
-      select {
-        padding: 0.7rem;
+    label {
+      font-size: 0.9rem;
+    }
+
+    input,
+    select {
+      font-size: 0.9rem;
+      padding: 0.65rem;
+    }
+
+    input[type="submit"] {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
+
+
+
+
+#ticket {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(233, 221, 221, 0.75); // Semi-transparent background for readability
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  #checklist2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    #form-check {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      input[type="radio"] {
+        margin-right: 0.5rem;
+        cursor: pointer;
       }
 
-      input[type="submit"] {
-        padding: 0.7rem;
+      label {
+        font-size: 1rem;
+        color: #555;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #checklist2 {
+      flex-direction: column;
+
+      #form-check {
+        margin-bottom: 0.75rem;
+      }
+
+      label {
+        font-size: 0.9rem;
       }
     }
   }
 }
+
 
 
 

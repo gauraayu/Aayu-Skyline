@@ -268,7 +268,7 @@ body {
 }
 
 #top-deals {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 5%;
   padding: 20px;
 }
@@ -752,72 +752,116 @@ body {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 #bookingform h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
-  font-size: 2rem;
   color: #333;
   margin-bottom: 1.5rem;
 }
 #bookingform form {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
 }
 #bookingform form label {
   font-size: 1rem;
-  color: #444;
-  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.5rem;
 }
-#bookingform form input,
+#bookingform form input[type=text],
+#bookingform form input[type=number],
+#bookingform form input[type=tel],
+#bookingform form input[type=date],
 #bookingform form select {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.75rem;
   font-size: 1rem;
-  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
   transition: border-color 0.3s ease;
 }
-#bookingform form input:focus,
+#bookingform form input[type=text]:focus,
+#bookingform form input[type=number]:focus,
+#bookingform form input[type=tel]:focus,
+#bookingform form input[type=date]:focus,
 #bookingform form select:focus {
-  border-color: #007bff;
+  border-color: #007BFF;
   outline: none;
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
 }
 #bookingform form input[type=submit] {
-  background-color: #007bff;
+  background-color: #007BFF;
   color: #fff;
   font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem;
   border: none;
-  border-radius: 5px;
-  padding: 0.8rem;
-  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 #bookingform form input[type=submit]:hover {
   background-color: #0056b3;
 }
-#bookingform form input[type=submit]:active {
-  background-color: #004080;
-}
 @media (max-width: 768px) {
   #bookingform {
     padding: 1.5rem;
   }
-  #bookingform form {
-    gap: 1rem;
+  #bookingform h1 {
+    font-size: 1.5rem;
   }
-  #bookingform form input,
-  #bookingform form select {
-    padding: 0.7rem;
+  #bookingform label {
+    font-size: 0.9rem;
   }
-  #bookingform form input[type=submit] {
-    padding: 0.7rem;
+  #bookingform input,
+  #bookingform select {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+  }
+  #bookingform input[type=submit] {
+    font-size: 0.9rem;
+  }
+}
+
+#ticket {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: rgba(233, 221, 221, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#ticket #checklist2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#ticket #checklist2 #form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+#ticket #checklist2 #form-check input[type=radio] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+#ticket #checklist2 #form-check label {
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  #ticket #checklist2 {
+    flex-direction: column;
+  }
+  #ticket #checklist2 #form-check {
+    margin-bottom: 0.75rem;
+  }
+  #ticket #checklist2 label {
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=index.css.map */
