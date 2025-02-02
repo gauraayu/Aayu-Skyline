@@ -84,7 +84,7 @@ let deelete=(id)=>{
 let url=`http://localhost:3000/flight/${id}`
 fetch(url,{method:"DELETE"})
 }
-
+//update 
 let updatee=async(id)=>{
 let url=`http://localhost:3000/flight/${id}`
 let res=await fetch(url)
